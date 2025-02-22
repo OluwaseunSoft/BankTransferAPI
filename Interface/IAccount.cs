@@ -1,6 +1,6 @@
-﻿using FCMBBankTransaction.Model;
+﻿using BankTransactionAPI.Model;
 
-namespace FCMBBankTransaction.Interface
+namespace BankTransactionAPI.Interface
 {
     public interface IAccount
     {

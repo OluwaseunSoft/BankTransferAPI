@@ -1,16 +1,15 @@
 ﻿using Dapper;
-using FCMBBankTransaction.Interface;
-using FCMBBankTransaction.Model;
+using BankTransactionAPI.Interface;
+using BankTransactionAPI.Model;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Data.SqlClient;
-using BankTransactionAPI.Model;
 
-namespace FCMBBankTransaction.Service
+namespace BankTransactionAPI.Service
 {
     public class AccountService : IAccount
     {
-        private readonly BankTransactionDbContext _dbContext;
-        public AccountService(BankTransactionDbContext dbContext)
+        private readonly DapperDbConnection _dbContext;
+        public AccountService(DapperDbConnection dbContext)
         {
             _dbContext = dbContext;
         }

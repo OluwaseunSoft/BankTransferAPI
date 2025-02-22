@@ -1,6 +1,6 @@
+using BankTransactionAPI.Interface;
 using BankTransactionAPI.Model;
-using FCMBBankTransaction.Interface;
-using FCMBBankTransaction.Service;
+using BankTransactionAPI.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,8 +13,8 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<ITransaction, TransactionService>();
 builder.Services.AddTransient<IAccount, AccountService>();
 builder.Services.AddTransient<ICustomer, CustomerService>();
-builder.Services.AddTransient<ITransfer, TransferService>();
-builder.Services.AddSingleton<BankTransactionDbContext>(new BankTransactionDbContext());
+builder.Services.AddTransient<ITransfer, TransferService>(); 
+builder.Services.AddTransient<IDapperDbConnection, DapperDbConnection>();
 
 var app = builder.Build();
 

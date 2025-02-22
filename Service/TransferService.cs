@@ -1,7 +1,7 @@
-﻿using FCMBBankTransaction.Interface;
-using FCMBBankTransaction.Model;
+﻿using BankTransactionAPI.Interface;
+using BankTransactionAPI.Model;
 
-namespace FCMBBankTransaction.Service
+namespace BankTransactionAPI.Service
 {
     public class TransferService : ITransfer
     {
