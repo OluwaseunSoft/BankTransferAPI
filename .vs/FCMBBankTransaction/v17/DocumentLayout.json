@@ -1,0 +1,349 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\service\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:service\\transactionservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\model\\transferresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:model\\transferresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\interface\\itransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:interface\\itransfer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\service\\transferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:service\\transferservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\model\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:model\\accountdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:service\\accountservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\interface\\iaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:interface\\iaccount.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\service\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:service\\customerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\interface\\icustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:interface\\icustomer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\controllers\\transfercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:controllers\\transfercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\model\\transferrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:model\\transferrequest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\controllers\\transactionhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:controllers\\transactionhistorycontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\model\\transactiondatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:model\\transactiondatadto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\interface\\itransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:interface\\itransaction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|c:\\users\\akinw\\source\\repos\\banktransactionapi\\banktransferapi\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{F472ED65-B791-4DE9-99A0-E3653D94DF2B}|BankTransactionAPI.csproj|solutionrelative:appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 30,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:350743133:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1999510690:0:{bf84ea66-d821-4dba-b1b1-2777d8574775}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:133:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:134:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:135:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:136:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:137:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:138:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:132:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:131:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:130:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0174dea2-fdbe-4ef1-8f99-c0beae78880f}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "TransferResponse.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Model\\TransferResponse.cs",
+              "RelativeDocumentMoniker": "Model\\TransferResponse.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Model\\TransferResponse.cs",
+              "RelativeToolTip": "Model\\TransferResponse.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAA3AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:49:21.668Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "ITransfer.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Interface\\ITransfer.cs",
+              "RelativeDocumentMoniker": "Interface\\ITransfer.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Interface\\ITransfer.cs",
+              "RelativeToolTip": "Interface\\ITransfer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:48:06.802Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "TransferService.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Service\\TransferService.cs",
+              "RelativeDocumentMoniker": "Service\\TransferService.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Service\\TransferService.cs",
+              "RelativeToolTip": "Service\\TransferService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAiwBQAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:47:05.366Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "AccountDto.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Model\\AccountDto.cs",
+              "RelativeDocumentMoniker": "Model\\AccountDto.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Model\\AccountDto.cs",
+              "RelativeToolTip": "Model\\AccountDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:41:10.169Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AccountService.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Service\\AccountService.cs",
+              "RelativeDocumentMoniker": "Service\\AccountService.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Service\\AccountService.cs",
+              "RelativeToolTip": "Service\\AccountService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAACmAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:39:43.999Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "IAccount.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Interface\\IAccount.cs",
+              "RelativeDocumentMoniker": "Interface\\IAccount.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Interface\\IAccount.cs",
+              "RelativeToolTip": "Interface\\IAccount.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:38:52.688Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "CustomerService.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Service\\CustomerService.cs",
+              "RelativeDocumentMoniker": "Service\\CustomerService.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Service\\CustomerService.cs",
+              "RelativeToolTip": "Service\\CustomerService.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAuwBMAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:31:47.81Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "ICustomer.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Interface\\ICustomer.cs",
+              "RelativeDocumentMoniker": "Interface\\ICustomer.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Interface\\ICustomer.cs",
+              "RelativeToolTip": "Interface\\ICustomer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA5AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:28:02.52Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "TransferController.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Controllers\\TransferController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TransferController.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Controllers\\TransferController.cs",
+              "RelativeToolTip": "Controllers\\TransferController.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAiwBIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:24:47.644Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "TransferRequest.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Model\\TransferRequest.cs",
+              "RelativeDocumentMoniker": "Model\\TransferRequest.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Model\\TransferRequest.cs",
+              "RelativeToolTip": "Model\\TransferRequest.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:22:57.842Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAA4AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:10:51.746Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "TransactionHistoryController.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Controllers\\TransactionHistoryController.cs",
+              "RelativeDocumentMoniker": "Controllers\\TransactionHistoryController.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Controllers\\TransactionHistoryController.cs",
+              "RelativeToolTip": "Controllers\\TransactionHistoryController.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAiwAoAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T11:09:17.609Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TransactionService.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Service\\TransactionService.cs",
+              "RelativeDocumentMoniker": "Service\\TransactionService.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Service\\TransactionService.cs",
+              "RelativeToolTip": "Service\\TransactionService.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T10:50:08.76Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "TransactionDataDto.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Model\\TransactionDataDto.cs",
+              "RelativeDocumentMoniker": "Model\\TransactionDataDto.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Model\\TransactionDataDto.cs",
+              "RelativeToolTip": "Model\\TransactionDataDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T10:44:59.638Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ITransaction.cs",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Interface\\ITransaction.cs",
+              "RelativeDocumentMoniker": "Interface\\ITransaction.cs",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\Interface\\ITransaction.cs",
+              "RelativeToolTip": "Interface\\ITransaction.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-20T10:42:37.524Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\appsettings.json",
+              "RelativeDocumentMoniker": "appsettings.json",
+              "ToolTip": "C:\\Users\\akinw\\source\\repos\\BankTransactionAPI\\BankTransferAPI\\appsettings.json",
+              "RelativeToolTip": "appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-02-20T10:32:15.798Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

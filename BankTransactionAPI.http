@@ -1,0 +1,6 @@
+@FCMBBankTransaction_HostAddress = http://localhost:5151
+
+GET {{FCMBBankTransaction_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
