@@ -1,5 +1,6 @@
 ﻿using BankTransactionAPI.Interface;
 using BankTransactionAPI.Model;
+using System;
 
 namespace BankTransactionAPI.Service
 {
@@ -20,17 +21,26 @@ namespace BankTransactionAPI.Service
             var result = new TransferResponse();
             try
             {
-                var customer = await _customer.GetCustomer(request.SourceAccount);
-                if(customer.CustomerName != null)
+                var account = await _account.GetAccount(request.SourceAccount);
+                if(account != null && account?.AccountNumber != "")
                 {
-                    result = await _transaction.SaveTransactionData(request);
+                    var transactionData = new TransactionDataDto();
+                    transactionData.TransactionDate = DateTime.Now;
+                    transactionData.Rate = 0;
+                    transactionData.Amount = request.Amount;
+                    transactionData.AccountNumber = request.SourceAccount;
+                    transactionData.DiscountedAmount = 0;
+                    var doTransfer = await _transaction.SaveTransactionData(transactionData);
+                }
+                else
+                {
+                    throw new Exception("Invalid Source Account");
                 }
                 return result;
             }
             catch (Exception ex)
             {
-                Console.WriteLine(ex.Message);
-                return result;
+                throw new Exception(ex.Message);
             }
         }
     }

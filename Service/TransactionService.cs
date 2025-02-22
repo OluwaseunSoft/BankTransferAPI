@@ -33,23 +33,23 @@ namespace BankTransactionAPI.Service
                 return await Task.FromResult(Enumerable.Empty<TransactionDataDto>());
             }
         }
-        public async Task<TransferResponse> SaveTransactionData(TransferRequest request)
-        {
-            var transactionResponse = new TransferResponse();
+        public async Task<int> SaveTransactionData(TransactionDataDto request)
+        {            
             try
             {
                 using (var con = _dbContext.CreateConnection())
                 {
                     con.Open();
-                    string query = "SELECT TransactionId, AccountNumber, Amount, DiscountedAmount, Rate, TransactionDate FROM TransactionData WHERE AccountNumber = @accountNumber";
-                    //var result = await con.ExecuteAsync<TransferResponse>(query, new { });
-                    return transactionResponse;
+                    string query = "INSERT INTO TransactionData (AccountNumber, Amount, DiscountedAmount, Rate, TransactionDate) " +
+                        "VALUES (@AccountNumber, @Amount, @DiscountedAmount, @Rate, @TransactionDate)";
+                    var result = await con.ExecuteAsync(query, request);                   
+                    return result;
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                return transactionResponse;
+                return 0;
             }
         }
     }
