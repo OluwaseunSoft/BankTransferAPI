@@ -1,3 +1,4 @@
+using BankTransactionAPI.Model;
 using FCMBBankTransaction.Interface;
 using FCMBBankTransaction.Service;
 
@@ -13,6 +14,7 @@ builder.Services.AddTransient<ITransaction, TransactionService>();
 builder.Services.AddTransient<IAccount, AccountService>();
 builder.Services.AddTransient<ICustomer, CustomerService>();
 builder.Services.AddTransient<ITransfer, TransferService>();
+builder.Services.AddSingleton<BankTransactionDbContext>(new BankTransactionDbContext());
 
 var app = builder.Build();
 
