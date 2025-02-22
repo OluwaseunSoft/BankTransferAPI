@@ -1,4 +1,4 @@
-﻿namespace FCMBBankTransaction.Model
+﻿namespace BankTransactionAPI.Model
 {
     public class TransferRequest
     {

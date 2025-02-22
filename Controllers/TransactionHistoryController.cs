@@ -1,8 +1,8 @@
-﻿using FCMBBankTransaction.Interface;
+﻿using BankTransactionAPI.Interface;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FCMBBankTransaction.Controllers
+namespace BankTransactionAPI.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]

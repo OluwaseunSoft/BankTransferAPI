@@ -1,9 +1,10 @@
-﻿using FCMBBankTransaction.Model;
+﻿using BankTransactionAPI.Model;
 
-namespace FCMBBankTransaction.Interface
+namespace BankTransactionAPI.Interface
 {
     public interface ITransaction
     {
         Task<IEnumerable<TransactionDataDto>> GetTransactionData(string accountNumber);
+        Task<int> SaveTransactionData(TransactionDataDto request);
     }
 }

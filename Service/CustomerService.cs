@@ -1,24 +1,24 @@
 ﻿using Dapper;
-using FCMBBankTransaction.Interface;
-using FCMBBankTransaction.Model;
+using BankTransactionAPI.Interface;
+using BankTransactionAPI.Model;
 using Microsoft.Extensions.Configuration;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
-namespace FCMBBankTransaction.Service
+namespace BankTransactionAPI.Service
 {
     public class CustomerService : ICustomer
     {
-        private readonly IConfiguration _configuration;       
-        public CustomerService(IConfiguration configuration)
+        private readonly IDapperDbConnection _dbContext;
+        public CustomerService(IDapperDbConnection dbContext)
         {
-            _configuration = configuration;
+            _dbContext = dbContext;
         }       
 
         public async Task<CustomerDto> GetCustomer(string customerId)
         {
             try
             {
-                using (var con = new SqlConnection(_configuration.GetConnectionString("DbConnection")))
+                using (var con = _dbContext.CreateConnection())
                 {
                     con.Open();
                     string query = "SELECT CustomerId, CustomerName, CustomerType, DateCreated FROM CustomerData WHERE CustomerId = @customerId";
