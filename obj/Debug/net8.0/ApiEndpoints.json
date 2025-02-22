@@ -1,0 +1,34 @@
+[
+  {
+    "ContainingType": "FCMBBankTransaction.Controllers.TransactionHistoryController",
+    "Method": "GetEvents",
+    "RelativePath": "api/TransactionHistory",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "accountNumber",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FCMBBankTransaction.Controllers.TransferController",
+    "Method": "DoTransfer",
+    "RelativePath": "api/Transfer",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "doTransfer",
+        "Type": "FCMBBankTransaction.Model.TransferRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
