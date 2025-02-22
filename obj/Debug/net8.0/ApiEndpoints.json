@@ -1,6 +1,6 @@
 [
   {
-    "ContainingType": "FCMBBankTransaction.Controllers.TransactionHistoryController",
+    "ContainingType": "BankTransactionAPI.Controllers.TransactionHistoryController",
     "Method": "GetEvents",
     "RelativePath": "api/TransactionHistory",
     "HttpMethod": "GET",
@@ -16,7 +16,7 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "FCMBBankTransaction.Controllers.TransferController",
+    "ContainingType": "BankTransactionAPI.Controllers.TransferController",
     "Method": "DoTransfer",
     "RelativePath": "api/Transfer",
     "HttpMethod": "POST",
@@ -25,7 +25,7 @@
     "Parameters": [
       {
         "Name": "doTransfer",
-        "Type": "FCMBBankTransaction.Model.TransferRequest",
+        "Type": "BankTransactionAPI.Model.TransferRequest",
         "IsRequired": true
       }
     ],

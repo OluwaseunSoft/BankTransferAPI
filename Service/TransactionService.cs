@@ -8,9 +8,9 @@ namespace BankTransactionAPI.Service
 {
     public class TransactionService : ITransaction
     {
-        private readonly DapperDbConnection _dbContext;
+        private readonly IDapperDbConnection _dbContext;
 
-        public TransactionService(DapperDbConnection dbContext)
+        public TransactionService(IDapperDbConnection dbContext)
         {
             _dbContext = dbContext;
         }

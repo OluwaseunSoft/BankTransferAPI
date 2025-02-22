@@ -8,8 +8,8 @@ namespace BankTransactionAPI.Service
 {
     public class CustomerService : ICustomer
     {
-        private readonly DapperDbConnection _dbContext;
-        public CustomerService(DapperDbConnection dbContext)
+        private readonly IDapperDbConnection _dbContext;
+        public CustomerService(IDapperDbConnection dbContext)
         {
             _dbContext = dbContext;
         }       
