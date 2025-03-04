@@ -7,6 +7,7 @@
         public decimal Amount { get; set; }
         public string ResponseDescription { get; set; }
         public string ResponseCode { get; set; }
+        public DateTime TransactionTime { get; set; }
 
     }
 }
