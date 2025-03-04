@@ -7,6 +7,6 @@
         public decimal Amount { get; set; }
         public decimal DiscountedAmount { get; set; }
         public decimal Rate { get; set; }
-        public DateTime TransactionDate { get; set; }
+        public DateOnly TransactionDate { get; set; }
     }
 }

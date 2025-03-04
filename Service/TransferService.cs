@@ -27,22 +27,35 @@ namespace BankTransactionAPI.Service
                 {
                     throw new Exception("Invalid Source Account");
                 }
+
                 var customerType = await GetCustomerType(account.CustomerId);
-                if(customerType.CustomerType == "BUSINESS")
+                if (customerType.CustomerType == "BUSINESS")
                 {
-                    transactionData.DiscountedAmount = await BusinessCustomerDiscount(account.CustomerId);
+                    var customerDiscount = await BusinessCustomerDiscount(account.CustomerId);
+                    transactionData.DiscountedAmount = customerDiscount.DiscountedAmount;
+                    transactionData.Rate = customerDiscount.Rate;
                 }
                 else if (customerType.CustomerType == "RETAIL")
                 {
-                    transactionData.DiscountedAmount = await RetailCustomerDiscount(account.AccountNumber);
+                    var customerDiscount = await RetailCustomerDiscount(account.AccountNumber);
+                    transactionData.DiscountedAmount = customerDiscount.DiscountedAmount;
+                    transactionData.Rate = customerDiscount.Rate;
                 }
-                
-                transactionData.TransactionDate = DateTime.Now;
-                transactionData.Rate = 0;
+
+                transactionData.TransactionDate = DateOnly.FromDateTime(DateTime.Now);
                 transactionData.Amount = request.Amount;
                 transactionData.AccountNumber = request.SourceAccount;
-                transactionData.DiscountedAmount = 0;
                 var doTransfer = await _transaction.SaveTransactionData(transactionData);
+
+                if (doTransfer > 0)
+                {
+                    result.ResponseDescription = "Successful";
+                    result.ResponseCode = "00";
+                    result.Amount = request.Amount;
+                    result.DestinationAccount = request.DestinationAccount;
+                    result.SourceAccount = request.SourceAccount;
+                    result.TransactionTime = DateTime.Now;
+                }
 
                 return result;
             }
@@ -58,14 +71,26 @@ namespace BankTransactionAPI.Service
             return customer;
         }
 
-        private async Task<int> BusinessCustomerDiscount(int customerId)
+        private async Task<CustomerDiscountResponse> BusinessCustomerDiscount(int customerId)
         {
-            return 0;
+            var result = new CustomerDiscountResponse();
+            int accountCount = 0;
+            var customerAccounts = await _account.GetAccounts(customerId.ToString());
+            if (customerAccounts != null)
+            {
+                var accountss = customerAccounts.Where(x=>x.AccountOpenDate > )
+            }
+            result.DiscountedAmount = 0;
+            result.Rate = 0;
+            return result;
         }
 
-        private async Task<int> RetailCustomerDiscount(string accountNumber)
+        private async Task<CustomerDiscountResponse> RetailCustomerDiscount(string accountNumber)
         {
-            return 0;
+            var result = new CustomerDiscountResponse();
+            result.DiscountedAmount = 0;
+            result.Rate = 0;
+            return result;
         }
     }
 }
