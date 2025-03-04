@@ -2,7 +2,7 @@
 {
     public class CustomerDiscountResponse
     {
-        public int DiscountedAmount { get; set; }
-        public int Rate { get; set; }
+        public decimal DiscountedAmount { get; set; }
+        public decimal Rate { get; set; }
     }
 }
