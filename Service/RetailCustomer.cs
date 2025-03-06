@@ -5,26 +5,27 @@ namespace BankTransactionAPI.Service
 {
     public class RetailCustomer : IRetailCustomer
     {
-         
-        public RetailCustomer()
+        private readonly ITransfer _transfer;
+        public RetailCustomer(ITransfer transfer)
         {
-            
+            _transfer = transfer;
         }
+        
         public async Task<CustomerDiscountResponse> RetailCustomerDiscount(string accountNumber, decimal transactionAmount, DateTime customerDate)
         {
             var result = new CustomerDiscountResponse();
-            var transactionCount = await NumberOfTransactionWithinAMonth(accountNumber);
+            var transactionCount = await _transfer.NumberOfTransactionWithinAMonth(accountNumber);
 
             if (DateTime.Now.Year - customerDate.Year >= 4 && transactionCount < 3)
             {
-                await CustomerLoyalty(transactionAmount, result);
+                await _transfer.CustomerLoyalty(transactionAmount, result);
                 return result;
             }
 
             if (transactionCount >= 3 && transactionAmount > 50000 && transactionAmount < 100000)
             {
                 result.Rate = 2;
-                result.DiscountedAmount = await GetDiscountedAmount(result.Rate, transactionAmount);
+                result.DiscountedAmount = await _transfer.GetDiscountedAmount(result.Rate, transactionAmount);
                 return result;
             }
 

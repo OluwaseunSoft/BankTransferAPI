@@ -13,8 +13,9 @@ builder.Services.AddSwaggerGen();
 builder.Services.AddTransient<ITransaction, TransactionService>();
 builder.Services.AddTransient<IAccount, AccountService>();
 builder.Services.AddTransient<ICustomer, CustomerService>();
-builder.Services.AddTransient<ITransfer, TransferService>(); 
-builder.Services.AddTransient<IRetailCustomer, RetailCustomer>(); 
+builder.Services.AddTransient<ITransfer, TransferService>();
+builder.Services.AddTransient<IRetailCustomer, RetailCustomer>();
+builder.Services.AddTransient<IBusinessCustomer, BusinessCustomer>();
 builder.Services.AddTransient<IDapperDbConnection, DapperDbConnection>();
 
 var app = builder.Build();
