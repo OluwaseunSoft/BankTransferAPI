@@ -4,6 +4,6 @@ namespace BankTransactionAPI.Interface
 {
     public interface ITransfer
     {
-        Task<TransferResponse> DoTransfer(TransferRequest request);
+        Task<TransferResponse> DoTransfer(TransferRequest request);        
     }
 }

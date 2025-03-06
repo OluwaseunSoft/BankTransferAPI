@@ -9,11 +9,15 @@ namespace BankTransactionAPI.Service
         private readonly IAccount _account;
         private readonly ICustomer _customer;
         private readonly ITransaction _transaction;
-        public TransferService(ICustomer customer, IAccount account, ITransaction transaction)
+        private readonly IRetailCustomer _retailCustomer;
+        private readonly IBusinessCustomer _businessCustomer;
+        public TransferService(ICustomer customer, IAccount account, ITransaction transaction, IRetailCustomer retailCustomer, IBusinessCustomer businessCustomer)
         {
             _account = account;
             _customer = customer;
             _transaction = transaction;
+            _retailCustomer = retailCustomer;
+            _businessCustomer = businessCustomer;
         }
 
         public async Task<TransferResponse> DoTransfer(TransferRequest request)
@@ -28,16 +32,16 @@ namespace BankTransactionAPI.Service
                     throw new Exception("Invalid Source Account");
                 }
 
-                var customerType = await GetCustomerType(account.CustomerId);
-                if (customerType.CustomerType == "BUSINESS")
+                var customer = await _customer.GetCustomer(account.CustomerId.ToString());
+                if (customer.CustomerType == "BUSINESS")
                 {
-                    var customerDiscount = await BusinessCustomerDiscount(account.CustomerId, request.Amount, request.SourceAccount);
+                    var customerDiscount = await _businessCustomer.BusinessCustomerDiscount(account.CustomerId, request.Amount, request.SourceAccount, customer.DateCreated);
                     transactionData.DiscountedAmount = customerDiscount.DiscountedAmount;
                     transactionData.Rate = customerDiscount.Rate;
                 }
-                else if (customerType.CustomerType == "RETAIL")
+                else if (customer.CustomerType == "RETAIL")
                 {
-                    var customerDiscount = await RetailCustomerDiscount(account.AccountNumber);
+                    var customerDiscount = await _retailCustomer.RetailCustomerDiscount(account.AccountNumber, request.Amount, customer.DateCreated);
                     transactionData.DiscountedAmount = customerDiscount.DiscountedAmount;
                     transactionData.Rate = customerDiscount.Rate;
                 }
@@ -63,80 +67,6 @@ namespace BankTransactionAPI.Service
             {
                 throw new Exception(ex.Message);
             }
-        }
-
-        private async Task<CustomerDto> GetCustomerType(int customerId)
-        {
-            var customer = await _customer.GetCustomer(customerId.ToString());
-            return customer;
-        }
-
-        private async Task<CustomerDiscountResponse> BusinessCustomerDiscount(int customerId, decimal transactionAmount, string accountNumber)
-        {
-            var result = new CustomerDiscountResponse();
-            int accountCount = 0;
-            try
-            {
-                var customerAccounts = await _account.GetAccounts(customerId.ToString());
-                if (customerAccounts == null) throw new Exception("Invalid Customer");
-
-                for (int i = 0; i < customerAccounts.Count; i++)
-                {
-                    foreach (var account in customerAccounts)
-                    {
-                        var sameYear = customerAccounts[i].AccountOpenDate.Year.Equals(account.AccountOpenDate.Year);
-                        if (sameYear && customerAccounts[i].AccountNumber != account.AccountNumber)
-                        {
-                            accountCount++;
-                        }
-                    }
-                }
-                var transactionCount = await NumberOfTransactionWithinAMonth(accountNumber);
-                if (accountCount > 1 && transactionAmount > 3)
-                {
-                    result.Rate = 0.07M;
-                    result.DiscountedAmount = await GetDiscountedAmount(result.Rate, transactionAmount);
-                    
-                }
-                return result;
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                return new CustomerDiscountResponse(); ;
-            }
-
-        }
-
-        private async Task<CustomerDiscountResponse> RetailCustomerDiscount(string accountNumber)
-        {
-            var result = new CustomerDiscountResponse();
-            result.DiscountedAmount = 0;
-            result.Rate = 0;
-            return result;
-        }
-
-        private async Task<decimal> GetDiscountedAmount(decimal rate, decimal amount)
-        {
-            return amount * rate;
-        }
-
-        private async Task<int> NumberOfTransactionWithinAMonth(string accountNumber)
-        {
-            int transactionCount = 0;
-            var transactions = await _transaction.GetTransactionData(accountNumber);
-            for (int i = 0; i < transactions.ToList().Count; i++)
-            {
-                foreach (var transaction in transactions)
-                {
-                    var sameMonth = transactions.ToList()[i].TransactionDate.Month.Equals(transaction.TransactionDate.Month);
-                    if (sameMonth && transactions.ToList()[i].TransactionDate.Year == transaction.TransactionDate.Year)
-                    {
-                        transactionCount++;
-                    }
-                }
-            }
-            return transactionCount;
-        }
+        }       
     }
 }
