@@ -10,12 +10,14 @@ namespace BankTransactionAPI.Service
         private readonly ICustomer _customer;
         private readonly ITransaction _transaction;
         private readonly IRetailCustomer _retailCustomer;
-        public TransferService(ICustomer customer, IAccount account, ITransaction transaction, IRetailCustomer retailCustomer)
+        private readonly IBusinessCustomer _businessCustomer;
+        public TransferService(ICustomer customer, IAccount account, ITransaction transaction, IRetailCustomer retailCustomer, IBusinessCustomer businessCustomer)
         {
             _account = account;
             _customer = customer;
             _transaction = transaction;
             _retailCustomer = retailCustomer;
+            _businessCustomer = businessCustomer;
         }
 
         public async Task<TransferResponse> DoTransfer(TransferRequest request)
@@ -33,7 +35,7 @@ namespace BankTransactionAPI.Service
                 var customer = await _customer.GetCustomer(account.CustomerId.ToString());
                 if (customer.CustomerType == "BUSINESS")
                 {
-                    var customerDiscount = await BusinessCustomerDiscount(account.CustomerId, request.Amount, request.SourceAccount, customer.DateCreated);
+                    var customerDiscount = await _businessCustomer.BusinessCustomerDiscount(account.CustomerId, request.Amount, request.SourceAccount, customer.DateCreated);
                     transactionData.DiscountedAmount = customerDiscount.DiscountedAmount;
                     transactionData.Rate = customerDiscount.Rate;
                 }
@@ -65,35 +67,6 @@ namespace BankTransactionAPI.Service
             {
                 throw new Exception(ex.Message);
             }
-        }
-
-        public async Task CustomerLoyalty(decimal transactionAmount, CustomerDiscountResponse result)
-        {
-            result.Rate = 10;
-            result.DiscountedAmount = await GetDiscountedAmount(result.Rate, transactionAmount);
-        }
-
-        public async Task<decimal> GetDiscountedAmount(decimal rate, decimal amount)
-        {
-            return (rate / 100) * amount;
-        }
-
-        public async Task<int> NumberOfTransactionWithinAMonth(string accountNumber)
-        {
-            int transactionCount = 0;
-            var transactions = await _transaction.GetTransactionData(accountNumber);
-            for (int i = 0; i < transactions.ToList().Count; i++)
-            {
-                foreach (var transaction in transactions)
-                {
-                    var sameMonth = transactions.ToList()[i].TransactionDate.Month.Equals(DateTime.Now.Month);
-                    if (sameMonth && transactions.ToList()[i].TransactionDate.Year == DateTime.Now.Year)
-                    {
-                        transactionCount++;
-                    }
-                }
-            }
-            return transactionCount;
-        }
+        }       
     }
 }

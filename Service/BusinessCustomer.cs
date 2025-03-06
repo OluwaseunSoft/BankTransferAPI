@@ -6,11 +6,11 @@ namespace BankTransactionAPI.Service
     public class BusinessCustomer : IBusinessCustomer
     {
         private readonly IAccount _account;
-        private readonly ITransfer _transfer;
-        public BusinessCustomer(IAccount account, ITransfer transfer)
+        private readonly IUtility _utility;
+        public BusinessCustomer(IAccount account, IUtility utility)
         {
             _account = account;
-            _transfer = transfer;
+            _utility = utility;
         }
         public async Task<CustomerDiscountResponse> BusinessCustomerDiscount(int customerId, decimal transactionAmount, string accountNumber, DateTime customerDate)
         {
@@ -32,17 +32,17 @@ namespace BankTransactionAPI.Service
                         }
                     }
                 }
-                var transactionCount = await _transfer.NumberOfTransactionWithinAMonth(accountNumber);
+                var transactionCount = await _utility.NumberOfTransactionWithinAMonth(accountNumber);
                 if (DateTime.Now.Year - customerDate.Year >= 4 && transactionCount < 3)
                 {
-                    await _transfer.CustomerLoyalty(transactionAmount, result);
+                    await _utility.CustomerLoyalty(transactionAmount, result);
                     return result;
                 }
 
                 if (accountCount > 1 && transactionCount >= 3 && transactionAmount > 150000)
                 {
                     result.Rate = 7;
-                    result.DiscountedAmount = await _transfer.GetDiscountedAmount(result.Rate, transactionAmount);
+                    result.DiscountedAmount = await _utility.GetDiscountedAmount(result.Rate, transactionAmount);
                     return result;
                 }
 
